@@ -1,0 +1,24 @@
+{
+  "name": "@seatentacle/3d-renderer",
+  "version": "0.1.0",
+  "description": "React-based renderer for 3d dungeon",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/seatentacle/anglerjs-3d-renderer.git"
+  },
+  "keywords": [
+    "rpg",
+    "dungeon",
+    "adventure"
+  ],
+  "author": "Dmitry Gusarov <sea.tentacle@gmail.com>",
+  "license": "MPL-2.0",
+  "bugs": {
+    "url": "https://github.com/seatentacle/anglerjs-3d-renderer/issues"
+  },
+  "homepage": "https://github.com/seatentacle/anglerjs-3d-renderer#readme"
+}
