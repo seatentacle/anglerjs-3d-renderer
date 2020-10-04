@@ -4,6 +4,8 @@
   "description": "React-based renderer for 3d dungeon",
   "main": "index.js",
   "scripts": {
+    "start": "cross-env NODE_ENV=\"development\" TS_NODE_PROJECT=\"configs/tsconfig.webpack.json\" webpack-dev-server --open",
+    "build": "cross-env NODE_ENV=\"production\" TS_NODE_PROJECT=\"configs/tsconfig.webpack.json\" webpack --progress",
     "lint": "eslint src --ext .ts,.tsx"
   },
   "gitHooks": {
@@ -26,9 +28,24 @@
   "homepage": "https://github.com/seatentacle/anglerjs-3d-renderer#readme",
   "devDependencies": {
     "@seatentacle/eslint-plugin": "1.2.0",
+    "@types/node": "14.11.2",
+    "@types/webpack": "4.41.22",
+    "@types/webpack-dev-server": "3.11.0",
+    "@types/webpack-merge": "4.1.5",
+    "clean-webpack-plugin": "3.0.0",
+    "cross-env": "7.0.2",
     "eslint": "7.10.0",
+    "html-webpack-plugin": "4.5.0",
     "lint-staged": "10.4.0",
+    "source-map-loader": "1.1.0",
+    "ts-loader": "8.0.4",
+    "ts-node": "9.0.0",
+    "tsconfig-paths": "3.9.0",
     "typescript": "4.0.3",
+    "webpack": "4.44.2",
+    "webpack-cli": "3.3.12",
+    "webpack-dev-server": "3.11.0",
+    "webpack-merge": "5.1.4",
     "yorkie": "2.0.0"
   }
 }

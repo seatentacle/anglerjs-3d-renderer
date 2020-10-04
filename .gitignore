@@ -15,6 +15,9 @@ yarn-error.log*
 logs
 *.log
 
+# build
+dist
+
 # misc
 Thumbs.db
 .DS_Store
