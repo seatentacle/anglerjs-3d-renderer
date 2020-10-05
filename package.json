@@ -28,6 +28,8 @@
   "homepage": "https://github.com/seatentacle/anglerjs-3d-renderer#readme",
   "devDependencies": {
     "@seatentacle/eslint-plugin": "1.2.0",
+    "@semantic-release/changelog": "5.0.1",
+    "@semantic-release/git": "9.0.0",
     "@types/node": "14.11.2",
     "@types/webpack": "4.41.22",
     "@types/webpack-dev-server": "3.11.0",
@@ -37,6 +39,7 @@
     "eslint": "7.10.0",
     "html-webpack-plugin": "4.5.0",
     "lint-staged": "10.4.0",
+    "semantic-release": "17.1.2",
     "source-map-loader": "1.1.0",
     "ts-loader": "8.0.4",
     "ts-node": "9.0.0",
