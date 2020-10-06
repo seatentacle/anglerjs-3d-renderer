@@ -1,6 +1,6 @@
 {
   "name": "@seatentacle/3d-renderer",
-  "version": "0.1.0",
+  "version": "1.0.0",
   "description": "React-based renderer for 3d dungeon",
   "main": "index.js",
   "scripts": {
