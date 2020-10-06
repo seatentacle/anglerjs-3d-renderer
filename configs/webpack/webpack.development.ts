@@ -3,6 +3,9 @@ import webpack from 'webpack';
 import HtmlWebpackPlugin from 'html-webpack-plugin';
 
 const config: webpack.Configuration = {
+  entry: {
+    app: path.resolve(__dirname, '../../stories/index.tsx'),
+  },
   output: {
     filename: '[name].bundle.js',
     publicPath: '/',
