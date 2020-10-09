@@ -41,3 +41,24 @@ jobs:
         run: npm ci --ignore-scripts --no-audit --no-progress --prefer-offline
       - name: Lint
         run: npm run lint
+  test:
+    name: Unit-tests
+    runs-on: ubuntu-18.04
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v1
+      - name: Setup Node.js
+        uses: actions/setup-node@v1
+        with:
+          node-versions: 12
+      - name: Cache npm dependencies
+        uses: actions/cache@v2
+        with:
+          key: ${{ runner.os }}-node-${{ hashFiles('**/package-lock.json') }}
+          path: ~/.npm
+          restore-keys: |
+            ${{ runner.os }}-node-
+      - name: Install dependencies
+        run: npm ci --ignore-scripts --no-audit --no-progress --prefer-offline
+      - name: Test
+        run: npm run test
