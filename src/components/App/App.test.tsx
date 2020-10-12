@@ -4,11 +4,12 @@ import {
   ShallowWrapper,
 } from 'enzyme';
 import App from './App';
+import { Cube } from './App.styled';
 
 const renderComponent = (): ShallowWrapper<{ className: string }> => shallow(<App />);
 
-it('should have thr correct class', () => {
+it('should have the correct side count', () => {
   const component = renderComponent();
 
-  expect(component.props().className).toBe('app');
+  expect(component.find(Cube).children().length).toBe(6);
 });
