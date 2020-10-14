@@ -24,10 +24,10 @@ describe('Utils:CellView', () => {
 
   describe('getHeight', () => {
     it('should return the correct height for a particular side', () => {
-      expect(getHeight(cellSide.FRONT, 12.5)).toBeCloseTo(7.5);
-      expect(getHeight(cellSide.BACK, 12.5)).toBeCloseTo(7.5);
-      expect(getHeight(cellSide.RIGHT, 12.5)).toBeCloseTo(7.5);
-      expect(getHeight(cellSide.LEFT, 12.5)).toBeCloseTo(7.5);
+      expect(getHeight(cellSide.FRONT, 12.5)).toBe(7.5);
+      expect(getHeight(cellSide.BACK, 12.5)).toBe(7.5);
+      expect(getHeight(cellSide.RIGHT, 12.5)).toBe(7.5);
+      expect(getHeight(cellSide.LEFT, 12.5)).toBe(7.5);
 
       expect(getHeight(cellSide.TOP, 12.5)).toBe(12.5);
       expect(getHeight(cellSide.BOTTOM, 12.5)).toBe(12.5);

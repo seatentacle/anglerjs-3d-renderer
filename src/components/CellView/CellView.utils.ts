@@ -29,7 +29,7 @@ export const getHeight: GetHeight = (side, height) =>
   side === cellSide.TOP ||
   side === cellSide.BOTTOM
     ? height
-    : height / 1.666;
+    : parseFloat((height / 1.666).toFixed(1));
 
 export const getTransform: GetTransform = (side, translateZ, height) => {
   switch (side) {
