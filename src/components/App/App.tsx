@@ -1,26 +1,46 @@
 import React from 'react';
+import { ThemeProvider } from 'styled-components';
+import CellView, { cellSide } from '../CellView';
+
 import {
-  Cube,
-  CubeFaceBack,
-  CubeFaceBottom,
-  CubeFaceFront,
-  CubeFaceLeft,
-  CubeFaceRight,
-  CubeFaceTop,
+  Camera,
+  Map,
   Scene,
 } from './App.styled';
+import {
+  WIDTH,
+  HEIGHT,
+  TRANSLATE_X,
+  TRANSLATE_Z,
+} from 'constants/dimensions';
+
+const defaultTheme = {
+  width: WIDTH,
+  height: HEIGHT,
+  translateX: TRANSLATE_X,
+  translateZ: TRANSLATE_Z,
+};
 
 const App: React.FC = () => (
-  <Scene>
-    <Cube>
-      <CubeFaceFront>front</CubeFaceFront>
-      <CubeFaceBack>back</CubeFaceBack>
-      <CubeFaceRight>right</CubeFaceRight>
-      <CubeFaceLeft>left</CubeFaceLeft>
-      <CubeFaceTop>top</CubeFaceTop>
-      <CubeFaceBottom>bottom</CubeFaceBottom>
-    </Cube>
-  </Scene>
+  <ThemeProvider theme={ defaultTheme }>
+    <Scene>
+      <Map>
+        <Camera>
+          <CellView
+            position={{ x: 3, y: 3 }}
+            sides={[
+              cellSide.FRONT,
+              cellSide.BACK,
+              cellSide.RIGHT,
+              cellSide.LEFT,
+              cellSide.TOP,
+              cellSide.BOTTOM,
+            ]}
+          />
+        </Camera>
+      </Map>
+    </Scene>
+  </ThemeProvider>
 );
 
 export default App;
