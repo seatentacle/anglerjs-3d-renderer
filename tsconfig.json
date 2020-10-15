@@ -13,7 +13,9 @@
     "noImplicitAny": true,
     "strictNullChecks": true,
     "jsx": "react",
+    "resolveJsonModule": true,
     "paths": {
+      "components/*": ["src/components/*"],
       "constants/*": ["src/constants/*"]
     }
   },

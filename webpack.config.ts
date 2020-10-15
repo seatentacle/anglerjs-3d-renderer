@@ -39,6 +39,7 @@ const config: webpack.Configuration = webpackMerge({
   resolve: {
     modules: ['node_modules'],
     alias: {
+      components: path.resolve(__dirname, 'src/components'),
       constants: path.resolve(__dirname, 'src/constants'),
     },
     extensions: ['.js', '.ts', '.tsx'],

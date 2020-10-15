@@ -1,2 +1,2 @@
 export { default } from './CellView';
-export { cellSide } from './CellView.types';
+export * from './CellView.types';

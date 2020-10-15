@@ -4,6 +4,7 @@ module.exports = {
   ],
   preset: 'ts-jest',
   moduleNameMapper: {
+    '^components/(.*)$': '<rootDir>/src/components/$1',
     '^constants/(.*)$': '<rootDir>/src/constants/$1',
   },
   collectCoverageFrom: [
