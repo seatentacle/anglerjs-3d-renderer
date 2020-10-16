@@ -1,35 +1,27 @@
 import React from 'react';
 import { ThemeProvider } from 'styled-components';
 import CameraView from '../CameraView';
-import { cells } from 'lib/camera/__mocks__/map.template.json';
-import { Cell } from 'lib/camera';
+import { direction as cameraDirection } from 'constants/directions';
+import { AppProps } from './App.types';
 
 import {
   Map,
   Scene,
 } from './App.styled';
-import {
-  WIDTH,
-  HEIGHT,
-  TRANSLATE_X,
-  TRANSLATE_Z,
-} from 'constants/dimensions';
 
-const defaultTheme = {
-  width: WIDTH,
-  height: HEIGHT,
-  translateX: TRANSLATE_X,
-  translateZ: TRANSLATE_Z,
-};
-
-const App: React.FC = () => (
-  <ThemeProvider theme={ defaultTheme }>
+const App: React.FC<AppProps> = ({
+  map,
+  theme,
+  position = { x: 0, y: 0 },
+  direction = cameraDirection.NORTH,
+}) => (
+  <ThemeProvider theme={ theme }>
     <Scene>
       <Map>
         <CameraView
-          position={{ x: 3, y: 3 }}
-          direction={ 2 }
-          cells={ cells as Array<Cell> }
+          position={ position }
+          direction={ direction }
+          cells={ map.cells }
         />
       </Map>
     </Scene>
