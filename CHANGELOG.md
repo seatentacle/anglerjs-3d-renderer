@@ -1,3 +1,10 @@
+# [1.0.0-alpha.4](https://github.com/seatentacle/anglerjs-3d-renderer/compare/v1.0.0-alpha.3...v1.0.0-alpha.4) (2020-10-16)
+
+
+### Features
+
+* add basic interface for the app ([66e68a9](https://github.com/seatentacle/anglerjs-3d-renderer/commit/66e68a921b8a8c8df4cfb6236eb9191d0688608f))
+
 # [1.0.0-alpha.3](https://github.com/seatentacle/anglerjs-3d-renderer/compare/v1.0.0-alpha.2...v1.0.0-alpha.3) (2020-10-16)
 
 
