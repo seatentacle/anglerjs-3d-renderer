@@ -13,8 +13,11 @@
     "noImplicitAny": true,
     "strictNullChecks": true,
     "jsx": "react",
+    "resolveJsonModule": true,
     "paths": {
-      "constants/*": ["src/constants/*"]
+      "components/*": ["src/components/*"],
+      "constants/*": ["src/constants/*"],
+      "lib/*": ["src/lib/*"]
     }
   },
   "include": [

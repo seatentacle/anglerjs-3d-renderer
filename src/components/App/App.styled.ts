@@ -21,8 +21,3 @@ export const Map: React.FC = styled.div`
   transform-style: inherit;
   transform: translate3d(0, 0, 13.75rem);
 `;
-
-export const Camera: React.FC = styled.div`
-  transform-style: inherit;
-  transform: translateX(${({ theme }): number => theme.translateX}rem);
-`;
