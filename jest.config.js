@@ -9,7 +9,8 @@ module.exports = {
     '^lib/(.*)$': '<rootDir>/src/lib/$1',
   },
   collectCoverageFrom: [
-    "src/**/*.ts*"
+    "src/**/*.ts*",
+    "!src/**/stories.*"
   ],
   testEnvironment: 'node',
 };
