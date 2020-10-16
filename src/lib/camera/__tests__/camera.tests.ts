@@ -1,12 +1,12 @@
 import { getCameraStand } from '../index';
 import { direction } from 'constants/directions';
-import { cells } from './__mocks__/map.template.json';
+import { cells } from '../__mocks__/map.template.json';
 import {
   cameraStandToNorth,
   cameraStandToEast,
   cameraStandToSouth,
   cameraStandToWest,
-} from './__mocks__/cellsInCamera';
+} from '../__mocks__/cellsInCamera';
 import { Cell } from '../camera.types';
 
 describe('Lib:camera', () => {

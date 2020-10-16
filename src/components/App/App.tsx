@@ -1,9 +1,10 @@
 import React from 'react';
 import { ThemeProvider } from 'styled-components';
-import CellView, { cellSide } from '../CellView';
+import CameraView from '../CameraView';
+import { cells } from 'lib/camera/__mocks__/map.template.json';
+import { Cell } from 'lib/camera';
 
 import {
-  Camera,
   Map,
   Scene,
 } from './App.styled';
@@ -25,19 +26,11 @@ const App: React.FC = () => (
   <ThemeProvider theme={ defaultTheme }>
     <Scene>
       <Map>
-        <Camera>
-          <CellView
-            position={{ x: 3, y: 3 }}
-            sides={[
-              cellSide.FRONT,
-              cellSide.BACK,
-              cellSide.RIGHT,
-              cellSide.LEFT,
-              cellSide.TOP,
-              cellSide.BOTTOM,
-            ]}
-          />
-        </Camera>
+        <CameraView
+          position={{ x: 3, y: 3 }}
+          direction={ 2 }
+          cells={ cells as Array<Cell> }
+        />
       </Map>
     </Scene>
   </ThemeProvider>
