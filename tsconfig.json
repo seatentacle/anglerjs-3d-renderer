@@ -15,8 +15,10 @@
     "jsx": "react",
     "resolveJsonModule": true,
     "paths": {
+      "animations/*": ["src/animations/*"],
       "components/*": ["src/components/*"],
       "constants/*": ["src/constants/*"],
+      "hooks/*": ["src/hooks/*"],
       "lib/*": ["src/lib/*"]
     }
   },
